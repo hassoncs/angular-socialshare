@@ -2,7 +2,7 @@
   border: none;
   visibility: visible;
   width: auto;
-  height: 22px;
+  height: 20px;
   background: transparent;
   overflow: hidden;
   -webkit-text-size-adjust: none;
@@ -31,6 +31,7 @@
   text-align: left;
   display: inline-block;
   width: 55px;
+  vertical-align: top;
 }
 .facebookShare .facebookButton .pluginButton {
   background: #4c69ba;
@@ -97,6 +98,7 @@
 .facebookShare .facebookCount {
   display: inline-block;
   width: auto;
+  height: 20px;
 }
 .facebookShare .facebookCount .pluginCountButton {
   background: white;
@@ -112,6 +114,7 @@
   padding: 0 3px;
   text-align: center;
   white-space: nowrap;
+  vertical-align: top;
 }
 .facebookShare .facebookCount .pluginCountButton span {
   display: inline-block;
@@ -123,7 +126,7 @@
   height: 0;
   left: 2px;
   position: relative;
-  top: -15px;
+  top: -18px;
   width: 5px;
   z-index: 2;
 }
