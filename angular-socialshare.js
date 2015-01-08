@@ -32,7 +32,7 @@ angular.module('djds4rce.angular-socialshare', [])
           js = d.createElement('script');
           js.id = id;
           js.async = true;
-          js.src = "//connect.facebook.net/en_US/all.js";
+          js.src = "https://connect.facebook.net/en_US/all.js";
 
           ref.parentNode.insertBefore(js, ref);
 
@@ -158,7 +158,7 @@ angular.module('djds4rce.angular-socialshare', [])
       $timeout(function(){
         element.bind('click',function(){
           var url = encodeURIComponent(attr.url).replace(/'/g,"%27").replace(/"/g,"%22")
-          $window.open("//www.linkedin.com/shareArticle?mini=true&url="+url+"&title="+attr.title+"&summary="+attr.summary);
+          $window.open("http://www.linkedin.com/shareArticle?mini=true&url="+url+"&title="+attr.title+"&summary="+attr.summary);
         });
       });
     }
@@ -218,9 +218,9 @@ angular.module('djds4rce.angular-socialshare', [])
   }
 }]).directive('pintrest',[function(){
   return {
-    template: '<a href="{{href}}" data-pin-do="{{pinDo}}" data-pin-config="{{pinConfig}}"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png" /></a>',
+    template: '<a href="{{href}}" data-pin-do="{{pinDo}}" data-pin-config="{{pinConfig}}"><img src="https://assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png" /></a>',
     link: function(scope,element,attr){
-      scope.href = '//www.pinterest.com/pin/create/button/?url='+encodeURIComponent(attr.href)+'&media='+encodeURIComponent(attr.img)+'&description='+encodeURIComponent(attr.description);
+      scope.href = 'http://www.pinterest.com/pin/create/button/?url='+encodeURIComponent(attr.href)+'&media='+encodeURIComponent(attr.img)+'&description='+encodeURIComponent(attr.description);
       scope.pinDo = attr.pinDo||"buttonPin";
       scope.pinConfig = attr.pinConfig||"beside";
     }
